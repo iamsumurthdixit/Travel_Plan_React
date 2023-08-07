@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./Pages/Home";
+import { Login } from "./Pages/Login";
+import { Register } from "./Pages/Register";
+import { Navbar } from "./Pages/Navbar";
+import { AddPlan } from "./Pages/AddPlan";
+import { ViewDetailed } from "./Pages/ViewDetailed";
+import { AppProvider } from "./Pages/AppContextFile";
+import { ModifyDate } from "./Pages/ModifyDate";
+import { RegisteredPlansOnly } from "./Pages/RegisteredPlansOnly";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <AppProvider>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/:planId" element={<ViewDetailed />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/addPlan" element={<AddPlan />} />
+            <Route
+              path="/registeredPlansOnly"
+              element={<RegisteredPlansOnly />}
+            />
+            <Route path="/modifyDate/:planId" element={<ModifyDate />} />
+          </Routes>
+        </AppProvider>
+      </Router>
     </div>
   );
 }

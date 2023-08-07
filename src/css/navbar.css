@@ -1,0 +1,85 @@
+/* navbar.css */
+
+/* navbar.css */
+.nav-link {
+    color: #000; /* Change link text color to black */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .nav-link:hover {
+    color: #000; /* Keep the text color black on hover */
+  }
+  
+  .nav-item.active .nav-link {
+    color: #ff0000; /* Highlight the user's name in red when logged in */
+  }
+  
+  .btn-round {
+    border-radius: 50px; /* Make the logout button round */
+  }
+  
+
+nav {
+    background-color: rgb(167, 167, 240);
+    padding: 10px 20px;
+    color: #fff;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  li {
+    margin-left: 20px;
+  }
+  
+  li:first-child {
+    margin-left: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+  }
+  
+  a:hover {
+    background-color: gold;
+  }
+  
+  li.logout {
+    cursor: pointer;
+  }
+  
+  li.logout:hover {
+    background-color: #ff6347;
+  }
+  
+  li.user-name {
+    font-weight: bold;
+    color: black;
+    margin-right: 20px;
+  }
+  
+  li.add-plan,
+  li.view-registered-plans {
+    display: none;
+  }
+  
+  /* Show Add Plan link for admin */
+  [data-role="admin"] li.add-plan {
+    display: block;
+  }
+  
+  /* Show View Registered Plans link for user */
+  [data-role="user"] li.view-registered-plans {
+    display: block;
+  }
+  

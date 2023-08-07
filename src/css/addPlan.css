@@ -1,0 +1,59 @@
+/* addPlan.css */
+
+/* Styling for the main container */
+.add-plan-container {
+    margin: 20px;
+  }
+  
+  /* Styling for form elements */
+  .add-plan-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* Styling for labels */
+  .add-plan-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Styling for text inputs and textarea */
+  .add-plan-input {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for date inputs */
+  .add-plan-input[type="date"] {
+    width: 200px; /* Adjust the width as needed */
+  }
+  
+  /* Styling for number inputs */
+  .add-plan-input[type="number"] {
+    width: 100px; /* Adjust the width as needed */
+  }
+  
+  /* Styling for file input */
+  .add-plan-input[type="file"] {
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the Add Plan button */
+  .add-plan-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .add-plan-button:hover {
+    background-color: #2980b9;
+  }
+  
